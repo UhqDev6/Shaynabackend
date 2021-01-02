@@ -13,7 +13,7 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th>
+                                        <th>No</th>
                                         <th>Name</th>
                                         <th>Type</th>
                                         <th>Price</th>
@@ -22,9 +22,9 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                  @forelse ($items as $item)
+                                  @forelse ($items as $no => $item)
                                   <tr>
-                                    <td>{{ $item->id }}</td>
+                                    <td>{{ $no+1 }}</td>
                                     <td>{{ $item->name }}</td>
                                     <td>{{ $item->type }}</td>
                                     <td>{{ $item->price }}</td>

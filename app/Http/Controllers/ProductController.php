@@ -98,6 +98,9 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $items = Product::findOrFail($id);
+        $items->delete();
+
+        return redirect()->route('products.index');
     }
 }
