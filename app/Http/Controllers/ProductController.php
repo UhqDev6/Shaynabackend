@@ -108,4 +108,18 @@ class ProductController extends Controller
 
         return redirect()->route('products.index');
     }
+
+
+    public function gallery(Request $request, $id)
+    {
+        $product = Product::findOrFail($id);
+        $items = ProductGallery::with('product')
+        ->where('product_id', $id)
+        ->get();
+
+        return view('pages.products.gallery')->with([
+            'product' => $product,
+            'items' => $items
+        ]);
+    }
 }
