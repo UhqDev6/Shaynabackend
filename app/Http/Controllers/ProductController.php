@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Models\Product;
+use App\Models\ProductGallery;
 use App\Http\Requests\ProductRequest;
 
 
@@ -112,7 +113,9 @@ class ProductController extends Controller
 
     public function gallery(Request $request, $id)
     {
+        // jika menggunakan findOrFail, misal datanya tidak ada maka akan di tampilkan error 404
         $product = Product::findOrFail($id);
+        //statement baru -> mengambil data foto
         $items = ProductGallery::with('product')
         ->where('product_id', $id)
         ->get();
