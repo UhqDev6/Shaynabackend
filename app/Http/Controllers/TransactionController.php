@@ -56,7 +56,11 @@ class TransactionController extends Controller
      */
     public function show($id)
     {
-        //
+        $item = Transaction::with('details.product')->findOrFail($id);
+        // printf($item);
+        return view('pages.transactions.show')->with([
+            'item' => $item
+        ]);
     }
 
     /**

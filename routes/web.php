@@ -25,3 +25,4 @@ Route::resource('product-galleries', 'ProductGalleryController');
 Route::resource('transactions', 'TransactionController');
 
 
+
