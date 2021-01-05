@@ -44,26 +44,26 @@
     </tr>
 </table>
 
-{{-- <div class="row">
+<div class="row">
     <div class="col-4">
-        <a href="{{ route('transactions.status', $items->) }}? status=SUCCESS"
+        <a href="{{ route('transactions.status', $item->id) }}?status=SUCCESS"
             class="btn btn-success btn-block">
          <i class="fa fa-check"></i>Sukses
          </a>
     </div>
 
     <div class="col-4">
-        <a href="{{ route('transactions.status', $items->) }}? status=FAILED"
+        <a href="{{ route('transactions.status', $item->id) }}?status=FAILED"
             class="btn btn-danger btn-block">
          <i class="fa fa-times"></i>Gagal
          </a>
     </div>
     
     <div class="col-4">
-        <a href="{{ route('transactions.status', $items->) }}? status=PENDING"
+        <a href="{{ route('transactions.status', $item->id) }}? status=PENDING"
             class="btn btn-warning btn-block">
          <i class="fa fa-spinner"></i>Pending
          </a>
     </div>
     
-</div> --}}
+</div>
