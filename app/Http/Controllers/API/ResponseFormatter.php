@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controller\API;
+namespace App\Http\Controllers\API;
 
 class ResponseFormatter
 {
     protected static $response = [
-        'mete' => [
+        'meta' => [
             'code' => 200,
             'status' => 'success',
             'message' => null
@@ -32,3 +32,6 @@ class ResponseFormatter
         return response()->json(self::$response, self::$response['meta']['code']);
     }
 }
+
+
+
