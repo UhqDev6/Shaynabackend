@@ -35,7 +35,12 @@ class CheckoutController extends Controller
         // printf($transaction);
 
         return ResponseFormatter::success($transaction);
+
+        foreach ($variable as $key => $value) {
+            # code...
+        }
     }
+    
 }
 
 
